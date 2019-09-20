@@ -1,6 +1,6 @@
 import React from 'react';
 
-const useClickOutside = (ref, callback, { eventType = 'click' }) => {
+const useClickOutside = (ref, callback, eventType = 'click') => {
   const handlerRef = React.useRef(callback);
 
   /**
