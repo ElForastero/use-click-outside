@@ -30,7 +30,7 @@ const Modal = ({ onClose }) => {
 Or if you need a custom event type instead of default 'click':
 
 ```js
-  useClickOutside(ref, onClose, 'mousedown');
+  useClickOutside(ref, onClose, { eventType: 'mousedown' });
 ```
 
 ## Show your support
