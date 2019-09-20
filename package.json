@@ -1,6 +1,6 @@
 {
   "name": "use-click-outside",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React hook to execute callback when a click is happened outside of component.",
   "main": "dist/index.js",
   "repository": "https://github.com/ElForastero/use-click-outside",
