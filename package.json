@@ -1,0 +1,26 @@
+{
+  "name": "use-click-outside",
+  "version": "1.0.0",
+  "description": "React hook to execute callback when a click is happened outside of component.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/ElForastero/use-click-outside",
+  "author": "Eugene Dzhumak",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf ./dist && webpack --mode production",
+    "prepare": "yarn run build"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "prettier": "^1.18.0",
+    "react": "^16.8.6",
+    "terser-webpack-plugin": "^2.1.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
