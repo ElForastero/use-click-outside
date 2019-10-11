@@ -24,7 +24,7 @@ const useClickOutside = (
   useEffect(() => {
     const listener = (event: ListenerEvent) => {
       if (ref && ref.current) {
-        if (event.target) {
+        if (event.target.shadowRoot) {
           if (!event.target.shadowRoot.contains(ref.current)) {
             handlerRef.current(event);
           }
