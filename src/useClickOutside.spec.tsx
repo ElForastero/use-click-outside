@@ -1,9 +1,13 @@
 import React, { useRef } from 'react';
-import useClickOutside from '../src/useClickOutside';
-import { render, fireEvent } from '@testing-library/react';
+import useClickOutside from './useClickOutside';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-const Wrapper = ({ handler }) => {
+type WrapperProps = {
+  handler: () => void,
+}
+
+const Wrapper: React.FC<WrapperProps> = ({ handler }) => {
   const ref = useRef(null);
   useClickOutside(ref, handler);
 
@@ -12,8 +16,7 @@ const Wrapper = ({ handler }) => {
 
 describe('Main tests package', () => {
   it('renders without crushing', () => {
-    const handler = jest.fn();
-    const { getByText } = render(<Wrapper />);
+    const { getByText } = render(<Wrapper handler={console.log}/>);
 
     expect(getByText('Hello, World!')).toBeDefined();
   });
