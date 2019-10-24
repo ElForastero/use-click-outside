@@ -1,6 +1,6 @@
 {
   "name": "use-click-outside",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "React hook to execute callback when a click is happened outside of a component with Shadow DOM support",
   "main": "dist/index.js",
   "types": "dist/useClickOutside.d.ts",
