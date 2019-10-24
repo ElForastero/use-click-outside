@@ -23,7 +23,7 @@ const Modal = ({ onClose }) => {
   const ref = useRef();
   useClickOutside(ref, onClose);
 
-  return <dialod ref={ref}>Hello, World!</dialod>;
+  return <dialog ref={ref}>Hello, World!</dialog>;
 };
 ```
 
