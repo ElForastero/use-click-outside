@@ -2,15 +2,15 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/useClickOutside.ts',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js'],
+    extensions: ['.js', '.ts'],
   },
   externals: {
     react: 'react',
@@ -18,10 +18,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js/,
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /\.ts/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ],
   },
