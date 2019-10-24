@@ -37,11 +37,11 @@ const useClickOutside = (
     };
 
     document.addEventListener(eventType, listener);
-    document.addEventListener('touch', listener);
+    document.addEventListener('touchstart', listener);
 
     return () => {
       document.removeEventListener(eventType, listener);
-      document.removeEventListener('touch', listener);
+      document.removeEventListener('touchstart', listener);
     };
   });
 };
